@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Mochiy Pop One';
+}
+
+body {
+    
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 40px;
+    background: #a242bd;
+}
+
+h1 {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    margin: 5% auto;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 24px;
+    padding: 15px 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+/* PANTALLA INICIO */
+#pantalla-inicial {
+    text-align: center;
+    font-size: 20px;
+}
+
+.btn {
+    border: none;
+    background: white;
+    color: #060101;
+    padding: 8px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .5s;
+}
+.btn2{
+    border: none;
+    background: white;
+    color: #060101;
+    padding: 8px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 14px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* PANTALLA juego */
+#pantalla-juego {
+    display: none;
+}
+
+.pantalla-juego {
+    max-width: 50%;
+    margin: 5% auto;
+    text-align: center;
+}
+
+.pantalla-juego img {
+    max-width: 50%;
+}
+
+.opciones {
+    max-width: 90%;
+    margin: auto;
+}
+
+.opcion {
+    display: flex;
+    align-items: center;
+    margin: 5% auto;
+    cursor: pointer;
+}
+
+.opcion .letra {
+    background-color: #580078;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 40px;
+    border: 3px solid #fff;
+}
+
+.opcion .nombre {
+    background: #fff;
+    font-size: 18px;
+    margin-left: 15px;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+/* clases que se aplicará cuando haya acertada la opcion  */
+.opcion .nombreAcertada,
+.opcion .letraAcertada {
+    background-color: yellowgreen;
+    color: #fff;
+}
+
+/* clases que se aplicaran cuando se equivoque en la opcion elegida */
+.opcion .nombreNoAcertada,
+.opcion .letraNoAcertada {
+    background-color: darkred;
+    color: #fff;
+}
+
+/* PANTALLA final */
+
+#pantalla-final {
+    display: none;
+    text-align: center;
+}
+
+#pantalla-final #numCorrectas,
+#pantalla-final #numIncorrectas {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin: 10px;
+}
+
+
+
+@media (max-width:991px ){
+    .pantalla-juego {
+        max-width: 100%;
+        margin: 5% auto;
+        text-align: center;
+    }
+    
+    .pantalla-juego img {
+        max-width: 90%;
+    }
+}
+
+
+

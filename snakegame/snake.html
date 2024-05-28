@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Snake Game</title>
+    <link rel="stylesheet" href="sna.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="shortcut icon" href="serpiente.png" />
+  </head>
+  <body>
+<div class="contenedor">
+    <div class="wrapper">
+      <div class="game-details">
+        <span class="score">Puntos: 0</span>
+        <span class="high-score">Puntos Altos: 0</span>
+      </div>
+      <div class="play-board"></div>
+      <div class="controls">
+        <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
+        <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
+        <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
+        <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
+      </div>
+    </div>
+    <div class="game-over-card" id="game-over-card" style="display: none;">
+      <h2>¡Has perdido!</h2>
+      <p>Puntuación: <span id="final-score"></span></p>
+      <p>Puntuación más alta: <span id="final-high-score"></span></p>
+      <button onclick="location.reload()">Reintentar</button>
+  </div>
+    <div class="boton"> 
+     <button onclick="location.href='/Gamebox/index.html#home'">SALIR DEL JUEGO</button>
+    </div>
+</div>
+    <script src="javas.js" defer></script>
+  </body>
+</html>

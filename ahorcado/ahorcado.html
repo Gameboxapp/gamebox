@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del ahorcado</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/word-list.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    <link rel="shortcut icon" href="persona.png" />
+</head>
+<body>
+    <div class="contenedor">
+        <div class="game-modal">
+            <div class="content">
+                <img src="#" alt="gif">
+                <h4>Perdiste!</h4>
+                <p>La palabra correcta era: <b>arcoíris</b></p>
+                <button class="play-again">Juga de nuevo</button>
+            </div>
+        </div>
+ 
+
+    <div class="container">
+        <div class="hangman-box">
+            <img src="images/hangman-0.svg" draggable="false" alt="hangman-img">
+            <h1>Ahorcado</h1>
+        </div>
+        <div class="game-box">
+            <ul class="word-display"> </ul>
+            <h4 class="hint-text">
+            Pista:
+            <b>Lorem ipsum dolor sit amet consectertur adipisicing elit.</b>
+            </h4>
+            <h4 class="guess-text">
+                Incorrecta:
+                <b>0 / 6</b>
+                </h4>
+                <div class="keyboard"></div>
+        </div>
+    </div>
+    <div class="boton">
+        <button onclick="location.href='/Gamebox/index.html#home'" class="boton2">SALIR DEL JUEGO</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+
+}
+body
+{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+ background: #a242bd;
+}
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background: #912BBC;
+    padding: 40px 60px;
+}
+h2{
+    font-size: 3em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+}
+.reset
+{
+padding: 15px 20px;
+color: #a242bd;
+background: #fff;
+border: none;
+font-size: 1.5em;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+cursor: pointer;
+font-weight: 600;
+}
+.reset:focus
+{
+    color: #fff;
+    background: #D875C7;
+    
+
+}
+.game
+{
+    width: 430px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+
+}
+.item
+{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background: #fff;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+}
+.item.boxOpen
+{
+transform: rotateY(0deg);
+}
+
+.item::after
+{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #D875C7;
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+.boxOpen:after ,
+.boxMatch:after
+{
+    transform: rotateY(180deg);
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .game {
+        width: 350px; /* Adjust game width for medium screens */
+        height: 350px; /* Adjust game height for medium screens */
+        gap: 7px; /* Adjust gap between items for medium screens */
+    }
+
+    .item {
+        width: calc((100% - 40px) / 4); /* Adjust item width for medium screens */
+        height: calc((100% - 40px) / 4); /* Adjust item height for medium screens */
+        font-size: 2.5em; /* Adjust font size for medium screens */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 20px 30px; /* Ajustar el relleno para pantallas más pequeñas */
+    }
+
+    .game {
+        width: 300px; /* Ajustar el ancho del juego para pantallas más pequeñas */
+        height: 300px; /* Ajustar la altura del juego para pantallas más pequeñas */
+        gap: 5px; /* Ajustar el espacio entre elementos para pantallas más pequeñas */
+    }
+
+    .item {
+        width: calc((100% - 30px) / 4); /* Ajustar el ancho del elemento para pantallas más pequeñas con 4 elementos por fila */
+        height: calc((100% - 30px) / 4); /* Ajustar la altura del elemento para pantallas más pequeñas con 4 elementos por fila */
+        font-size: 1.5em; /* Ajustar el tamaño de fuente para pantallas más pequeñas */
+    }
+    h2{
+        font-size: 2em;
+    
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .game {
+        width: 350px; /* Ajustar el ancho del juego para pantallas medianas */
+        height: 350px; /* Ajustar la altura del juego para pantallas medianas */
+        gap: 7px; /* Ajustar el espacio entre elementos para pantallas medianas */
+    }
+
+    .item {
+        width: calc((100% - 40px) / 4); /* Ajustar el ancho del elemento para pantallas medianas con 4 elementos por fila */
+        height: calc((100% - 40px) / 4); /* Ajustar la altura del elemento para pantallas medianas con 4 elementos por fila */
+        font-size: 1.75em; /* Ajustar el tamaño de fuente para pantallas medianas */
+    }
+}
+
