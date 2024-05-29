@@ -49,11 +49,4 @@
         document.getElementById('modal-juego').style.display = 'none';
     }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const reset2 = document.getElementById('reset2');
-    if (reset2) {
-        reset2.addEventListener('click', function() {
-            window.location.href = 'index.html';
-        });
-    }
-});
+
