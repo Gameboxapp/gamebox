@@ -48,3 +48,12 @@
         // Código para cerrar el juego, por ejemplo:
         document.getElementById('modal-juego').style.display = 'none';
     }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const reset = document.getElementById('reset');
+    if (reset) {
+        reset.addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    }
+});
