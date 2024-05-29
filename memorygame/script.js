@@ -50,9 +50,9 @@
     }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const reset = document.getElementById('reset');
-    if (reset) {
-        reset.addEventListener('click', function() {
+    const reset2 = document.getElementById('reset2');
+    if (reset2) {
+        reset2.addEventListener('click', function() {
             window.location.href = 'index.html';
         });
     }
